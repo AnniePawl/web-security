@@ -1,0 +1,164 @@
+# Evolution of Cyber Security 
+
+## Lesson 1: SOAR
+- **SOAR:** Security Orchestration Automation and Response 
+- SOAR connects all other tools in security stack into defined networks that can be run automatically !
+- Increases efficiency by automating repetitive manual processes
+- Reduces context switching by pulling data from all different sources
+- Playbook (workflow) is like flowchart set of steps which can be repeated on demand. Allows team to respond to incidents same way every time. Improve response speed and consistency while maintaining human authority 
+- Orchestration and Automation - Ensures that standard operating procedure is followed - you can collect important data like what was done, when, and by whom 
+- Alert Fatigue- performance degradation in face of flood of alerts 
+- Investigation- determine what mitigation steps need to be taken
+- Benefits: Optimize, streamline, reduce workload, measure, centralize, accelerate, collaborate 
+## Lesson 2: Cloud Security 
+- Before cloud, orgs purchased their own computer systems to run app software. Systems were located at (company) facility and managed by employees 
+- ^ System expensive. Capital cost of hardware and labor
+- Many wasted resources . Most computers weren’t completely busy all the time
+- Virtualization: New way of using old computer technology. Lets a single server run the operating systems and apps from multiple servers simultaneously 
+- This consolidates workloads onto fewer servers, increasing utilization and saving money 
+- Data centers with rows of computer hardware dedicated to specific apps turned into general hardware resources running virtualized apps
+- IaaS: Infrastructure as a service
+- Saas: Software as a Service. Mostly everything done for you (Gmail)
+- Paas: Platform as a service. Cloud provider manages much of underlying infrastructure to abstract work away from users. 
+- Price becomes a reoccurring operating cost for companies 
+- **Cloud security is complicated ! Security is shared responsibility between cloud provider and customer using cloud services 
+- Security includes physical components and logical components 
+- Iaas: Vendor only responsible for securing access, network traffic, data apps
+- Multi-cloud  environment Many orgs still run in a hybrid world - some apps hosted in their own data centers, others in cloud 
+- ^ This creates uncoordinated security solutions 
+## Lesson 3: SD-WAN
+- How do legs w/ multiple locations traditionally connect their networks ?
+- Networks are becoming increasingly flexible and efficient 
+- Orgs used to have dedicated high-speed liens to send data from 
+- Super expensive to add new lines, not scalable. 
+- MPLS: MultiProtocol Label Switching: A way of routing traffic within networks. Data packets are assigned labels associated with predetermined path thru network 
+- ^ Gives companies greater control to prioritize different data flows.
+- More scalable ! Does not need dedicated physical lines along path. Instead, lines could be shared w/ other orgs
+- But MPLS had no built-in data protection and couldn’t keep up
+- SD-WAN - Software defined wide area network 
+- ^ solution - uses cheaper, broader bandwidth links
+- SD-WAN can also prioritize traffic (like MPLS), but also has zero-touch provisioning and centralized control. 
+- Provides enriched security (end-to-end) encryption , and all devices are authenticated 
+- But SD-WAN subject to malware and advanced threats that bad actors can exploit
+- NGFWs: Next generation fire walls
+- ^ installed at each internet point of access for protection 
+- Best NGFW might include: app control, URL filtering, anti-virus, intrusion prevention system (IPS), integration w/ sandboxing, SSL inspection
+## Lesson 4: Endpoint
+- Endpoint: Includes IoTs (Internet of Things) 
+- Endpoints are easy points of entry for hackers 
+- AV Antivirus was first endpoint security product. Signature-based: Looked for specific characteristics- could quarantine or expunge program. 
+- ^ BYOD (bring your own device) - means many more opportunities to exploit security loopholes 
+- Polymorphic Malware: Designed to change itself, mimicking viruses that mutate in natural world.
+- Endpoint Protection Platform (EEP) prevent file-based malware attacks. Stop malware before its executed at end point 
+- EEP is preventative focused: antivirus, device firewall, web filtering, data protection, encryption, device- control.. 
+- Device Control: tech that provides built-in security that detects, authorizes, and secures removable storage devices
+- Web Filtering: Enables network admins to control what type of site you can visit
+- Endpoint Detection and Response (EDR). Software used to detect, investigate, and respond to suspicious activities on endpoints. 
+- IoC: Indicators of compromise 
+-  EDR requires high level expertises, very manual 
+- Managed Detection and Response (MDR): Basic alert triage. Automated. Malicious actives actives a a protocol
+- EEP and ERD software used in parallel
+- Machine learning also helps detect malware before execution 
+## Lesson 5: Threat Information Services 
+- Virus signature list was no longer efficient and effective. Not scalable b/c so many malware variations
+- To deal with a million signature codes, malware family names were created. One signature to rule them all. Ex “virus A”
+- Sandboxing: An environment where behaviors of a file/ product can be closely watched. If something weird happens, it filed as malware. 
+- Sandbox can send details to vendors threat intelligence service to protect many 
+- AI and ML help catch malware 
+- Threat Intelligence Service: Catalogs knowledge about existing or emerging attacks (mechanisms, evidence (IoCs indicators of compromise), implications, adversary 
+- Important to share threats in real time instead of wait for periodic signature updates so bad actors don’t sneak past defenses 
+- Most vendors share with wider security community. Formal memberships like Cyber Threat Alliance and national + international  Computer Emergency Response Teams (CERTs), private partnerships, independent security researchers 
+## Lesson 6: Firewall 
+- As networks grow, important to control flow of network traffic. 
+- Used to use packet filter firewalls to examine lowest protocol layers (source and destination network addresses, protocols, port num) This determined if packet was allowed thru 
+- ^ Stateful Firewalls: Upgrade to observe network connections over time. If connection weird, firewall blocked that connection. Still can’t block rogue packets if they were using acceptable protocol. 
+- Firewall has trouble distinguishing between web apps that use same port. 3rd gen firewalls look deeper into data payloads
+- Application layer filtering: Understand higher-level protocols and apps inside them. Can understand HTTP, FTP, DNS, and others 
+- Firewall must prevent evolving cyber attacks 
+- NGFW has multiple security checkpoints , greater network visibility
+- Deep packet investigation: Deep packet investigation 
+-  Segmentation approach: Segment networks helps eliminate single point of entry
+- High performance inspection includes: apps, compute resources, analytics, encrypted data , data storage across multiple clouds
+## Lesson 7: Network Access Control
+- Network Access Control (NAC): controls access to network 
+- With rise of BYOD, hard to know all devices connecting to a network 
+- A lot of IoT devices can’t be trusted b/c lack ability to secure 
+- NAC profiles all connected network devices. Permits access to network resources based on profile. 
+- Limited and controlled access  
+- Ideal to have NAC solution with complete visibility into network to identify all devices and users. 
+- ^ Must be effectives in both wireless LANs and LANs
+- Needs to interoperate with multiplicity of vendor products and profile headless devices that are not equipped with an agent
+- Should have centralized architecture to enable efficient coverage of large, multi-site networks
+- Ability to micro-segment network to limit devices to only required resources  
+- Should be integrated into security framework to automatically notify and coordinate with other security devices to isolate and expunge contagion 
+## Lesson 8: Sandbox
+- Sandbox: Confines actions of code to sandbox device, and in isolation to rest of network. 
+- Purpose: observe activity of unknown code in quarantined environment where no harm can be done
+- If something bad/ unexpected happens, doesn’t effect other computers and devices on network
+- Zero-day attack: exploiting an unknown deficiency in code - this is why sandboxing was created
+- Based on activity, rather than attributes, of the code 
+- Evasion techniques can make it hard for sandbox to do its job. Needs to reflect user’s environment as accurately as possible
+- Sandboxes must have comprehensive test of all supported operating systems and apps 
+- Emulator must see each and every instruction from code that executes on CUP and emulate end-user environment 
+- Must be integrated with other network security devices 
+- Can share threat intelligence with other security network devices 
+## Lesson 9: Secure Email Gateway 
+- SPAM: Irrelevant and unsolicited messages 
+- People can send and receive messages with little verification or accountability (offered anonymity) 
+- Phishing technique: relies on naive people, tricking them into giving personal information
+- Businesses installed spam filters on mail servers. Filters rely on identifying patterns or key words in body of heading of email
+- Sender Policy Framework (SPF): Became standard in 2014—email authentication method that detects bogus sender addresses and emails. 
+- Phishing attacks are really lucrative, a ton of methods.
+- Secure Email Gateway (SEG): Spam filter, antivirus scanner, threat mutation, sandboxing 
+- Data Leak Prevention (DLP): feature to protect egress of sensitive data 
+## Lesson 10: Security Information & Event Management 
+- SIEM: Was primary an information platform that evolved into threat intelligence center, made to deal with alerts issued from intrusion prevention systems (IPS) and Intrusion Detection systems(IDS)
+- Measure and prove to compliance to legislations 
+- Payment Card Industry (PIC) 
+- General Data Protection Regulation (GDPR) 
+- Aggregates logs from many network sources 
+- Store log data for a length of time to satisfy auditing requirements 
+- Monitor, correlate, notify events in real-time
+- User and entity behavior analytics (UEBA)
+- SIEM tech historically complex and hard to use 
+- ML and AI integrated in later SIEM products
+- Helps establish inventory of network deices, apps, users, business services 
+- Builds topology of how each interconnected, establishing baseline for normal network behavior 
+## Lesson 11: Web Application Firewall 
+- WAF: web application firewall. An appliance or software that monitors and blocks HTTP traffic to and from web app 
+- Edge Firewall: Make secure gateways between local area network(LAN) and outside servers. Makes decisions based on blacklist of network addresses and blocks certain protocols and port numbers 
+- WAF inspects HTTP traffic to prevent attacks originating from web app security flaws (SQL injection, cross-site scripting, file inclusion, security misconfigurations)
+- FTP: file transfer protocol 
+- RSH: remote shell (command-line program) 
+- WAF monitors web apps over time and generates white list (legit web apps)
+- WAF has session monitoring and heuristics 
+- Newer WAF security features: distributed denial of service defense, IP reputation, anti-virus, data leak prevention (DLP) 
+- WAF shares info and collars w/ other security devices 
+## Lesson 12: Web Filter 
+- Security and objectionable content prompted development of web filtering 
+- ** Web filter is app that examines incoming page to determine if some or all should be blocked based on rules made by company
+- First line of defense agains web-based attacks
+- Rule are often different for different users like admin
+- CIPA: Children’s Internet protection act
+- Info can be censored for religious, political, or ideological purposes 
+- Browsing made safer, but sometimes filtering not granular enough or can expunge misdeeds from digital record
+- Whitelist and blacklist kind of effective, but a lot of false positives 
+- ML helps overcome inadvertently blocking legit content like art
+## Lesson 12: Wifi
+- Tech for ready wireline LAN of devices based on IEEE 802.11 standards
+- IEEE: Institute of electrical and electronics engineers
+- ^ugly name, brand consulting company came up wifi in 1999, pun on “hi-fi” meaning high fidelity, term associated with quality audio tech
+- Tangible hardware makes wifi possible 
+- Ethernet: system that defines how digital info is passed between computers and LAN. Typically associated with wired network. Began as series of computers joined by coaxial cables in either a bus or star topology 
+- Ethernet was “half duplex” allowed transmission both ways, but not simultaneously  (like a walkie talkie) 
+- Not scalable for companies/ businesses who needed to send data simultaneously 
+- ALOHAnet first wireless packet data network developed by Uni of Hawaii in 1971
+- Ethernet Switch (1989) create networks and routers allow networks to connect 
+- WLAN: Wide area networks 
+- AP: Access Point - a device that could communicate with wireless devices using same radio frequencies. 
+- ApPs are scalable and have range of 20 - 66 meters inside
+- 1993 - AT&T installed first large scale WaveLAN at Carnegie Mellon  
+- 1998- first ISP signed contract with American airlines, Hilton hotels, and Starbucks 
+- 2005, Sunnyvale CA was first city to offer city-wide wifi
+- Early wifi security had weak auth mechanisms 
+- 2003 WPA (wifi protected access) established by IEEE
